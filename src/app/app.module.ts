@@ -10,8 +10,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +25,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     AppRoutingModule,
     MaterialModule,
     LayoutModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
