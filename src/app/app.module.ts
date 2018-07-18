@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { SkillsComponent } from './home/components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     HomeComponent,
     routedComponents,
     NavbarComponent,
+    SkillsComponent,
   ],
 
   imports: [

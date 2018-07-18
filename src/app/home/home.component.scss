@@ -1,4 +1,21 @@
-.bgColor {
-    background-color: blue;
-    min-height: 500px;
+.header {
+    height: 500px;
+
+    &__background {
+        background: url(../../assets/images/openRoad.jpeg)center center/cover no-repeat;
+        display: flex;
+    }
+}
+.border {
+   background-color: black;
+   color: black;
+   height: 4px;
+   margin: 0;
+
+}
+
+.skills {
+    background-color: rgba(rebeccapurple, 0.4);
+    height: 400px;
+    border-bottom: 3px solid black;
 }
