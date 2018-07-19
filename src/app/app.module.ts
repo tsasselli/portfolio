@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { SkillsComponent } from './home/components/skills/skills.component';
+import { SkillService } from './services/skill.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { SkillsComponent } from './home/components/skills/skills.component';
     LayoutModule,
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [SkillService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
