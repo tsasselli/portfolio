@@ -7,12 +7,84 @@
   background-size: cover;
 }
 
-.skill-card {
+.skills {
+  background-color: rgba(rebeccapurple, 0.4);
+  border-bottom: 3px solid black;
+
+  &__title {
+    font-size: 3rem;
+    //padding-top: rem;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    padding: 0 3rem;
+  }
+
+  // &__card {
+  //  // padding: 2rem 0;
+  //   position: relative;
+  //   transform-style: preserve-3d;  
+  //   box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+  //   // &-side {
+  //   //   position: absolute;
+  //   //   backface-visibility: hidden;
+  //   //   cursor: pointer;
+  //   //   user-select: none;
+
+  //   // &--front {
+  //   //   background-color: purple;
+  //   // }
+  //   // &--back {
+  //   //   transform: rotateY(179.9deg);
+  //   //   background-color: blue;
+  //   // }
+  
+  //   &-image {
+  //     width: 14rem;
+  //     height: 14rem;
+  //     margin-right: 2rem;
+  //     margin-left: 2rem;
+  //   }
+  // }
+
+}
+
+.skills__card {
+  // padding: 2rem 0;
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow: 0 1.5rem 4rem rgba(black, .15);
+  width: 13rem;
+  height: 13rem;
+  transition: transform 1s;
+  
+  &-side {
+    position: absolute;
+    backface-visibility: hidden;
+    cursor: pointer;
+    user-select: none;
+    height: 13rem;
+    width: 13rem;
+
+  &--front {
+    background-color: purple;
+  }
+  &--back {
+    transform: rotateY(179.9deg);
+    background-color: blue;
+  }
+  }
+
+  &-image {
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+}
 
 
-        &__image {
-           width: 13rem;
-           height: 13rem;
 
-        }
+.bgColor {
+  background-color: red;
 }
