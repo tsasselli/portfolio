@@ -1,17 +1,33 @@
 <div class="skills" fxFlexFill>
-  <div fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-around center" fxLayoutGap="2rem">
+  <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="1rem">
     <h2 class="skills__title">Web Development Skills:</h2>
     <p class="skills__description">I've been coding for a couple years now and have experience in both iOS and Web Develpopment. Click or hover over the skills to see what prjects I built and what skills I used to build them.</p>
   </div>
   
-  <div class="row-skills" fxLayout="row" fxLayoutFill fxLayout.lt-md="column" fxLayoutAlign="space-around center"  fxLayoutGap="2rem">
-     <div class="skills__card" *ngFor="let skill of skills; let i = index" (mouseenter)="toggleFlip(skill)" (mouseleave)="toggleFlip(skill)" [@flipState]="skill.flip" fxLayoutAlign="center center">
+  <div class="row-skills" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center"  fxLayoutGap="2rem">
+     <div class="skills__card"  *ngFor="let skill of skills" [@fadeIn]="isVisible" (mouseenter)="toggleFlip(skill)" (mouseleave)="toggleFlip(skill)" [@flipState]="skill.flip" fxLayoutAlign="center center">
       <div class="skills__card-side skills__card-side--front">
           <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" >
             <span class="skills__title" fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
           </mat-card-title>
          <div fxLayout.gt-xs="row"  fxLayoutAlign="center center">
           <img mat-card-image class="skills__card-image" [src]="skill.cardImage">
+          </div>
+          <div fxLayout.gt-xs="row" fxLayoutAlign="center">
+            <div flex="50">
+              <ul class="skills__skillset">
+                <li *ngFor="let skillz of skill.skillsList | slice:0:4">
+                    <h2 class="skills__card-links">{{skillz}}</h2>
+                </li>
+              </ul>
+            </div>
+            <div flex="50">
+              <ul class="skills__skillset">
+                <li *ngFor="let skillz of skill.skillsList | slice:4:10">
+                    <h2 class="skills__card-links">{{skillz}}</h2>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -22,8 +38,8 @@
             </div>
             <div>
               <ul>
-                <a *ngFor="let skillz of skill.skills" [@fadeIn]="isVisible" class="skills__card-links" [routerLink]="['../' + 'skills/' + skillz]">
-                  <h2>{{skillz}}</h2>
+                <a *ngFor="let project of skill.projectsWeb" class="skills__card-links" [routerLink]="['../' + 'skills/' + skillz]">
+                  <h2>{{project}}</h2>
                 </a>
               </ul>
             </div>
@@ -32,3 +48,7 @@
       </div>
   </div>
 </div>
+
+
+
+<!-- u -->

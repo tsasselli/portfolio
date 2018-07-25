@@ -11,6 +11,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { SkillsComponent } from './home/components/skills/skills.component';
 import { SkillService } from './services/skill.service';
+import { IosSkillsComponent } from './home/components/skills/ios-skills/ios-skills.component';
+import { DesignSkillsComponent } from './home/components/skills/design-skills/design-skills.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { SkillService } from './services/skill.service';
     routedComponents,
     NavbarComponent,
     SkillsComponent,
+    IosSkillsComponent,
+    DesignSkillsComponent,
   ],
 
   imports: [

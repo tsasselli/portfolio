@@ -6,15 +6,28 @@ import { Injectable } from '@angular/core';
 })
 export class SkillService {
 
-  skills;
+  skills: Skill[];
 
   constructor() { 
     this.skills = [
-      // { title: "MongoDb", cardImage: "../../../../../../assets/images/mongoDb.png", description: "ladjlfjd jajae", flip: "inactive" },
-      // { title: "Express", cardImage: "../../../../../../assets/images/skill__express-js.png", description: "ladjlfjd jajae", flip: "inactive" },
-      { title: "Angular", cardImage: "../../assets/images/angular.png", description:"ladjlfjd jajae", flip: "inactive", skills: ['Javascript', 'HTML',  'CSS', 'Angular']},
-      { title: "MEAN Stack", cardImage: "../../../../../../assets/images/skill__mean.png", description:"ladjlfjd jajae", flip: "inactive", skills: ['Javascript', 'Angular']},
-      { title: "HTML, CSS, Javascript", cardImage: "../../../../../../assets/images/skill__html-css.png", description:"ladjlfjd jajae", flip: "inactive", skills: ['Javascript', 'HTML', 'CSS', 'Angular']},
+      { title: "Angular", 
+        cardImage: "../../assets/images/angular.png", 
+        projects: ['Yelp Camp', 'Shopify', 'Enuf'], 
+        flip: "inactive",
+        skillsList: ['RXJS', 'Angular Router', 'Observables', 'Angular Animations', 'Reactive Forms', 'Class Binding', 'Angular Fire'],
+      },
+      { title: "MEAN Stack",
+        cardImage: "../../../../../../assets/images/skill__mean.png", 
+        projects: ['Yelp Camp', 'Shopify', 'Enuf'], 
+        flip: "inactive", 
+        skillsList: ['Express Routing', 'Node Package Manager', 'MongoDb', 'MVC', 'NoSQL'],
+      },
+      { title: "HTML, CSS, Javascript", 
+        cardImage: "../../../../../../assets/images/skill__html-css.png", 
+        projects: ['Yelp Camp', 'Shopify', 'Enuf'],
+        flip: "inactive", 
+        skillsList: ['Javascript', 'HTML', 'CSS', 'Angular'],
+      },
     ]
   }
 }

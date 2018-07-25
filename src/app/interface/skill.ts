@@ -1,7 +1,8 @@
+import { SkillService } from './../services/skill.service';
 export interface Skill {
     title: string,
     cardImage: string,
-    description: string,
+    projects: string[];
     flip: string;
-    skills: [any];
+    skillsList: string[];
 }
