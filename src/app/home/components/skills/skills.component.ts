@@ -1,5 +1,5 @@
 import { Skill } from './../../../interface/skill';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { SkillService } from '../../../services/skill.service';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
@@ -17,11 +17,18 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       })),
       transition('active => inactive', animate('500ms ease-out')),
       transition('inactive => active', animate('500ms ease-in'))
-    ])  
+    ]),
+    trigger('fadeIn', [
+      state('hidden', style({ opacity: 0 })),
+      state('shown', style({ opacity: 1 })),
+      transition(':enter', animate('800ms ease-out')),
+      transition(':leave', animate('800ms ease-in')),
+    ]),
   ]
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit, OnChanges {
 
+  @Input() isVisible : boolean = true;
   skills: Skill[];
   flip: string = 'inactive';
 
@@ -29,6 +36,10 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     this.skills = this.skillService.skills;
+  }
+
+  ngOnChanges() {
+   this.isVisible ? 'shown' : 'hidden';
   }
 
   toggleFlip(skill) {

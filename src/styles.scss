@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'theme.scss';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-body {
+html {
     font-size: 62.5%; // sets 1rem to 10px
 }

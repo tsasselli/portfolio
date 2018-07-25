@@ -1,86 +1,62 @@
-.example-card {
-  max-width: 400px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg') center no-repeat;
-  background-size: cover;
-}
 
 .skills {
-  background-color: rgba(rebeccapurple, 0.4);
+  background-color: rgba(#3949ab, 0.9);
   border-bottom: 3px solid black;
+  border-top: 3px solid #fff;
+  padding: 0 2rem;
 
   &__title {
     font-size: 3rem;
-    //padding-top: rem;
+    color: #fff;
+    margin: 2rem 0;
   }
 
   &__description {
-    font-size: 1.6rem;
+    font-size: 2.3rem;
+    color: rgba(#fff, .67);
     padding: 0 3rem;
   }
-
-  // &__card {
-  //  // padding: 2rem 0;
-  //   position: relative;
-  //   transform-style: preserve-3d;  
-  //   box-shadow: 0 1.5rem 4rem rgba(black, .15);
-
-  //   // &-side {
-  //   //   position: absolute;
-  //   //   backface-visibility: hidden;
-  //   //   cursor: pointer;
-  //   //   user-select: none;
-
-  //   // &--front {
-  //   //   background-color: purple;
-  //   // }
-  //   // &--back {
-  //   //   transform: rotateY(179.9deg);
-  //   //   background-color: blue;
-  //   // }
-  
-  //   &-image {
-  //     width: 14rem;
-  //     height: 14rem;
-  //     margin-right: 2rem;
-  //     margin-left: 2rem;
-  //   }
-  // }
-
 }
 
 .skills__card {
   // padding: 2rem 0;
   position: relative;
   transform-style: preserve-3d;
-  box-shadow: 0 1.5rem 4rem rgba(black, .15);
-  width: 13rem;
-  height: 13rem;
+  width: 33rem;
+  height: 33rem;
   transition: transform 1s;
   
   &-side {
     position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(black, .15);
     backface-visibility: hidden;
     cursor: pointer;
     user-select: none;
-    height: 13rem;
-    width: 13rem;
+    width: 33rem;
+    height: 33rem;
 
-  &--front {
-    background-color: purple;
-  }
-  &--back {
-    transform: rotateY(179.9deg);
-    background-color: blue;
-  }
+      &--front {
+        background-color: rgba(#00227b, .7);
+
+      }
+      &--back {
+        transform: rotateY(179.9deg);
+        background-color: blue;
+        }
   }
 
   &-image {
-    max-width: 10rem;
-    max-height: 10rem;
+    width: 20rem;
+    height: 20rem;
   }
+
+  &-links {
+    color: #fff;
+  }
+}
+
+.row-skills {
+  margin-bottom: 3rem;
 }
 
 

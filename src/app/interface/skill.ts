@@ -3,4 +3,5 @@ export interface Skill {
     cardImage: string,
     description: string,
     flip: string;
+    skills: [any];
 }

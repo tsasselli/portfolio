@@ -14,27 +14,22 @@
     <div>
 
         <!-- Primary Navbar/toolbar -->
-        <mat-toolbar color="primary">
-            <button mat-icon-button (click)="sidenav.open()" fxHide="false" fxHide.gt-sm>
-                <mat-icon>menu</mat-icon>
-            </button>
-            <span> Travis Sasselli</span>  
-<span fxLayoutGap="20px"></span>
-
-            <div fxLayout="row" fxLayoutFill fxLayoutGap="20px" fxShow="false" fxShow.gt-sm>
-               <div fxFlex='0' fxLayoutAlign="center">
-                    <a>
-                        <mat-icon mat-list-icon>home</mat-icon>
-                        <span mat-line>home</span>
-                    </a>
-               </div>
-                <div fxFlex="20">
-                    <a>
-                        <mat-icon mat-list-icon>backup</mat-icon>
-                        <span mat-line>Backup</span>
-                    </a>
+        <mat-toolbar color="primary" >
+                <button mat-icon-button (click)="sidenav.open()" fxHide="false" fxHide.gt-sm>
+                  <mat-icon>menu</mat-icon>
+                </button>
+                <div fxLayout="row" fxLayoutFill fxLayoutGap="20px" fxShow="false" fxShow.gt-sm>
+                    <div fxFlex='0' fxLayoutAlign="center">
+                        <a routerLink="/home" routerLinkActive="is-activated">
+                            <span mat-line>Home</span>
+                        </a>
+                    </div>
+                    <div fxFlex="0">
+                        <a>
+                            <span mat-line>Skills</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
         </mat-toolbar>
     </div>
     <router-outlet></router-outlet>

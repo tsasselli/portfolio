@@ -1,25 +1,33 @@
 <div class="skills" fxFlexFill>
   <div fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-around center" fxLayoutGap="2rem">
-    <h2 class="skills__title bgColor">Web Development Skills:</h2>
+    <h2 class="skills__title">Web Development Skills:</h2>
     <p class="skills__description">I've been coding for a couple years now and have experience in both iOS and Web Develpopment. Click or hover over the skills to see what prjects I built and what skills I used to build them.</p>
   </div>
   
-  <div class="" fxLayout="row" fxLayoutFill fxLayout.xs="column" fxLayoutAlign="space-around center">
-     <div class="skills__card" *ngFor="let skill of skills" (click)="toggleFlip(skill)" [@flipState]="skill.flip" fxLayoutAlign="center center">
+  <div class="row-skills" fxLayout="row" fxLayoutFill fxLayout.lt-md="column" fxLayoutAlign="space-around center"  fxLayoutGap="2rem">
+     <div class="skills__card" *ngFor="let skill of skills; let i = index" (mouseenter)="toggleFlip(skill)" (mouseleave)="toggleFlip(skill)" [@flipState]="skill.flip" fxLayoutAlign="center center">
       <div class="skills__card-side skills__card-side--front">
-          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-            <span fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" >
+            <span class="skills__title" fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
           </mat-card-title>
-         <div fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutAlign="center">
+         <div fxLayout.gt-xs="row"  fxLayoutAlign="center center">
           <img mat-card-image class="skills__card-image" [src]="skill.cardImage">
           </div>
         </div>
 
-        <div class="skills__card-side skills__card-side--back">
-          <!-- <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-            <span fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
-          </mat-card-title> -->
-          <img mat-card-image class="skills__card-image" [src]="skill.cardImage">
+        <div class="skills__card-side skills__card-side--back" >
+          <div fxLayout.gt-xs="column" fxLayout.xs="column">
+            <div fxLayoutAlign="center center">
+              <h2>Projects</h2>
+            </div>
+            <div>
+              <ul>
+                <a *ngFor="let skillz of skill.skills" [@fadeIn]="isVisible" class="skills__card-links" [routerLink]="['../' + 'skills/' + skillz]">
+                  <h2>{{skillz}}</h2>
+                </a>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
   </div>
