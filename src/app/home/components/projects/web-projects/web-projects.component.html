@@ -1,0 +1,34 @@
+<div class="project" fxFlexFill>
+  <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="1rem">
+      <h2 class="project__title">Recent Projects:</h2>
+      <p class="project__description">I've been coding for a couple years now and have experience in both iOS and Web Develpopment. Click or hover over the project
+        to see what projects I built and what project I used to build them.
+      </p>
+  </div>
+  <div class="row-project" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center" fxLayoutGap="2rem">
+    <div class="project__card" *ngFor="let project of projects"
+       fxLayoutAlign="center center" >
+      <div class="project__card-side project__card-side--front">
+        <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+          <span class="project__card-title" fxLayoutAlign="center center" fxFlex="100%">{{project.name | slice:0:22}}</span>
+        </mat-card-title>
+        <div fxLayout.gt-xs="row" fxLayoutAlign="center center">
+          <img mat-card-image class="project__card-image" [src]="project.image">
+        </div>
+        <div fxLayout.gt-xs="row" fxLayout.lt-md="column">
+          <span class="project__description">{{ project.description }}</span>
+        </div>
+        <div class="project__description-row" fxLayout.gt-xs="row" fxLayout.lt-md="column">
+          <div fxFlex="50" fxLayoutAlign="start center">
+            <a href="www.enufisenough.org" class="project__links">{{ project.url }}</a>
+          </div>
+          <div fxFlex="50" fxLayoutAlign="end">
+            <a href="">
+              <i class="fa fa-github project__links-git"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

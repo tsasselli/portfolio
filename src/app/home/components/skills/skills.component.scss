@@ -1,30 +1,30 @@
 .skills {
-  background-color: rgba(#3949ab, 0.9);
-  border-bottom: 3px solid black;
-  border-top: 3px solid #fff;
-  padding: 0 2rem;
+  border-bottom: .5rem solid #00227b;
+  border-top: 3px solid black;
 
-  &__title {
-    font-size: 3rem;
-    color: #fff;
-    margin: 2rem 0;
+  &__col {
+    margin-bottom: 6rem;
+    margin-top: 2rem;
   }
 
   &__description {
     font-size: 2.3rem;
     color: rgba(#fff, .67);
-    padding: 0 3rem;
+    padding: 0 5rem;
   }
 
+  &__title {
+    color: #fff;
+    font-size: 3rem;
+  }
+  
   &__skillset {
     color: #fff;
 
     &-2 {
-      padding-right: 2rem;
       color: #fff;
     }
   }
-  
 }
 
 .skills__card {
@@ -45,34 +45,48 @@
     min-height: 33rem;
 
       &--front {
-        background-color: rgba(#00227b, .7);
-        min-width: 39rem;
-        min-height: 33rem;
-
+        background-color: rgba(#3849aa, .8);
+        min-width: 33rem;
+        min-height: 39rem;
+        padding: 1rem 2rem;
+        border-radius: 8%;
       }
       &--back {
         transform: rotateY(179.9deg);
-        background-color: blue;
+        background-color: rgba(#00227b, .8);
+        min-width: 33rem;
+        min-height: 45rem;
+        padding: 1rem 2rem;
+        border-radius: 8%;
         }
   }
 
+  &-projects {
+    color: #fff;
+    font-size: 3.4rem;
+    
+  }
   &-image {
-    width: 20rem;
-    height: 20rem;
+    margin: 2rem 0;
+    width: 22rem;
+    height: 20rem;    
   }
 
   &-links {
     color: #fff;
   }
+
+  &-title {
+     font-size: 3rem;
+     color: #fff;
+  }
+
+  &-row {
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
 }
-
-.row-skills {
-  margin-bottom: 3rem;
-  font-size: 1.3rem;
-  font-weight: 400;
-}
-
-
 
 .bgColor {
   background-color: red;

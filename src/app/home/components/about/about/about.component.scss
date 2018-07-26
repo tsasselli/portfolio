@@ -1,0 +1,22 @@
+.about {
+    &__header {
+        color: #fff;
+        font-size: 3.5rem;
+    }
+
+    &__image {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+    }
+
+    &__description {
+        color: white;
+        font-size: 2rem;
+        padding: 0 2rem;
+    }
+}
+
+.bgColor {
+    background-color: red;
+}

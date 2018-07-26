@@ -1,14 +1,21 @@
 <div class="skills" fxFlexFill>
-  <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="1rem">
-    <h2 class="skills__title">Web Development Skills:</h2>
-    <p class="skills__description">I've been coding for a couple years now and have experience in both iOS and Web Develpopment. Click or hover over the skills to see what prjects I built and what skills I used to build them.</p>
+  <!-- HEADER SECTION -->
+  <div fxLayout="column" class="skills__col" fxLayoutAlign="space-around center" fxLayoutGap="4rem">
+    <div>
+      <h2 class="skills__title">Web Development Skills:</h2>
+    </div>
+    <div >
+       <p class="skills__description">I've been coding for a couple years now and have experience in both iOS and Web Develpopment. Click or hover over the skills
+          to see what prjects I built and what skills I used to build them.
+       </p>
+    </div>
   </div>
-  
-  <div class="row-skills" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center"  fxLayoutGap="2rem">
+  <!-- CARD SECTION -->
+  <div class="skills__card-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center"  fxLayoutGap="2rem">
      <div class="skills__card"  *ngFor="let skill of skills" [@fadeIn]="isVisible" (mouseenter)="toggleFlip(skill)" (mouseleave)="toggleFlip(skill)" [@flipState]="skill.flip" fxLayoutAlign="center center">
       <div class="skills__card-side skills__card-side--front">
           <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" >
-            <span class="skills__title" fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
+            <span class="skills__card-title" fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
           </mat-card-title>
          <div fxLayout.gt-xs="row"  fxLayoutAlign="center center">
           <img mat-card-image class="skills__card-image" [src]="skill.cardImage">
@@ -34,13 +41,15 @@
         <div class="skills__card-side skills__card-side--back" >
           <div fxLayout.gt-xs="column" fxLayout.xs="column">
             <div fxLayoutAlign="center center">
-              <h2>Projects</h2>
+              <h2 class="skills__card-projects">Projects</h2>
             </div>
             <div>
               <ul>
-                <a *ngFor="let project of skill.projectsWeb" class="skills__card-links" [routerLink]="['../' + 'skills/' + skillz]">
-                  <h2>{{project}}</h2>
-                </a>
+                <li *ngFor="let project of skill.projects">
+                  <a class="skills__card-links" [routerLink]="['../' + 'skills/' + skillz]">
+                    <h2>{{project}}</h2>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
