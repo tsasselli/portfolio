@@ -1,3 +1,4 @@
+
 .skills {
   border-bottom: .5rem solid #00227b;
   border-top: 3px solid black;
@@ -41,13 +42,13 @@
     backface-visibility: hidden;
     cursor: pointer;
     user-select: none;
-    min-width: 33rem;
+    min-width: 23rem;
     min-height: 33rem;
 
       &--front {
         background-color: rgba(#3849aa, .8);
-        min-width: 33rem;
-        min-height: 39rem;
+        // min-width: 33rem;
+        // min-height: 39rem;
         padding: 1rem 2rem;
         border-radius: 8%;
       }

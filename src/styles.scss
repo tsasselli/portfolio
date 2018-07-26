@@ -3,8 +3,23 @@
 @import 'theme.scss';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'sass/_mixins.scss';
 
 html {
     font-size: 62.5%; // sets 1rem to 10px
     font-family: 'Roboto';
+
+    @include respond(lg) {
+      font-size: 56.25%; // 1rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(md) {
+      font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+
+    @include respond(xs) {
+      font-size: 45%;
+    }
+
 }

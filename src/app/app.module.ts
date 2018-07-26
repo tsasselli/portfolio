@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { ProjectService } from './services/project.service';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SkillService } from './services/skill.service';
 import { ContactComponent } from './home/components/contact/contact/contact.component';
 import { AboutComponent } from './home/components/about/about/about.component';
+import { IntrestsComponent } from './home/components/about/intrests/intrests.component';
+import { AngularFireModule } from 'angularfire2';
+import { ContactFormComponent } from './home/components/contact/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,8 @@ import { AboutComponent } from './home/components/about/about/about.component';
     WebProjectsComponent,
     ContactComponent,
     AboutComponent,
+    IntrestsComponent,
+    ContactFormComponent,
   ],
 
   imports: [
@@ -38,6 +44,7 @@ import { AboutComponent } from './home/components/about/about/about.component';
     MaterialModule,
     LayoutModule,
     FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [SkillService, ProjectService],
   bootstrap: [AppComponent]

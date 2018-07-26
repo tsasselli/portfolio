@@ -1,18 +1,40 @@
-<div class="about" fxFlex="100">
-  <div fxLayout="column" class="about__col">
-    <div fxFlex="20" fxLayoutAlign="center center">
-      <h2 class="about__header">My Story:</h2>
-    </div>
-    <div>
-      <div fxLayout.gt-md="row" fxLayout.lt-md="column">
-        <div fxFlex="30" fxFlexOrder.lt-md="2" fxLayoutAlign="center center">
-          <img mat-image class="about__image about" src="../../../../../assets/images/portfolio__pic.jpg" alt="">
+
+<div fxLayout="column">
+  <div fxLayout.gt-md="row" fxLayout.lt-md="column">
+    <div fxFlex="50">
+        <div class="about" fxLayout="column">
+          <div fxFlex="20" fxLayoutAlign="center center">
+            <h2 class="about__header">My Story:</h2>
+          </div>
+            <div fxLayout.gt-md="row" fxLayout.lt-md="column">
+              <div fxFlex="30" fxFlexOrder.lt-md="2" fxLayoutAlign="center start">
+                <img mat-image class="about__image about" src="../../../../../assets/images/portfolio__pic.jpg" alt="">
+              </div>
+              <div fxFlex="70" fxFlexOrder.lt-md="1" fxLayoutAlign="center">
+                <div fxLayout="column" class="about__description-container">
+                  <div fxFlex="30">
+                    <p class="about__description">
+                      I've been coding for a couple years now and have learned a few skillsets. Earlier this year
+                      I decided attend an accelerated program to enhance my skills in Web Development. I left the program with a passion for
+                      making quality websites and products.
+                    </p>
+                  </div>
+                <div fxFlex="70">
+                  <p class="about__description">I enjoy sharing my work with others and getting feedback so I can enhance the design and experience of the apps I create.
+                    I'm a very focused goal oriented person who loves to code and learn new things. I can pick up new skills quickly and have
+                    no problem taking on new challenges. I enjoy working in a team environment and am really comfortable developing through
+                    team collaboration on Github. Currently I am a freelance web developer, while teaching myself new skills to enhance my
+                    career. I'd like to take my attributes and quick ability to learn, to join
+                    an Web Development team soon and am willing to travel or relocate for the right opportunity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div fxFlex="70" fxFlexOrder.lt-md="1" fxLayoutAlign="center">
-          <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos corporis voluptatum repellat rem veritatis! Ipsum, cupiditate
-            dolor debitis quia, delectus quibusdam laboriosam neque soluta explicabo exercitationem tenetur placeat, repudiandae adipisci!</p>
-        </div>
-      </div>
     </div>
+    <div fxFlex="50" fxLayoutAlign="center center">
+        <app-intrests></app-intrests>
+    </div>    
   </div>
 </div>
