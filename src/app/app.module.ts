@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { environment } from './../environments/environment';
 import { ProjectService } from './services/project.service';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -22,6 +23,7 @@ import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './home/components/contact/contact-form/contact-form.component';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { NotFoundComponent } from './home/components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     AboutComponent,
     IntrestsComponent,
     ContactFormComponent,
+    NotFoundComponent,
   ],
 
   imports: [
@@ -48,7 +51,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     FlexLayoutModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    RouterModule,
   ],
   providers: [SkillService, ProjectService],
   bootstrap: [AppComponent]

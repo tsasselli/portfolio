@@ -8,15 +8,15 @@
   </div>
   <div fxFlex="80">
     <div fxLayout.gt-md="row" fxLayout.lt-md="column">
-      <div fxFlex="50">
-        <div fxLayout="column" class="contact__col">
+      <div fxFlex="50" [ngStyle.lt-md]="{'padding-bottom': '1rem'}">
+        <div fxLayout="column" [ngStyle.lt-md]="{'padding-top': '0rem'} " [ngStyle.gt-md]="{'padding-top': '4.5rem'} " class="contact__col">
           <div fxFlex="60" fxLayoutAlign="center">
             <p fxFlex="50" class="contact__description"> If your'e interested in knowing more or would like to work together. Feel free to contact me anytime! You can also find more
               info on the social media links below.
             </p>
           </div>
-          <div fxFlex="40" fxLayoutAlign="center">
-            <div fxFlex="40" fxLayout.gt-md="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center">
+          <div fxFlex="40"  fxLayoutAlign="center">
+            <div fxFlex="40" fxLayout.gt-md="row" fxLayoutAlign="space-around center">
               <div>
                 <a href="https://www.linkedin.com/in/travissasselli/">
                   <i class="fa fa-linkedin contact__img"></i>
@@ -35,7 +35,6 @@
             </div>
           </div>
         </div>
-        
       </div>
       <div fxFlex="50">
         <app-contact-form></app-contact-form>

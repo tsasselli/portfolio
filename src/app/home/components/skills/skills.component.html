@@ -1,4 +1,4 @@
-<div #skills class="skills" fxFlexFill>
+<div class="skills" fxFlexFill>
   <!-- HEADER SECTION -->
   <div fxLayout="column" class="skills__col" fxLayoutAlign="space-around center" fxLayoutGap="4rem">
     <div>
@@ -11,7 +11,7 @@
   </div>
   <!-- CARD SECTION -->
   <div class="skills__card-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center">
-     <div class="skills__card"  *ngFor="let skill of skills" [@fadeIn]="isVisible" (mouseenter)="toggleFlip(skill)" (mouseleave)="toggleFlip(skill)" [@flipState]="skill.flip" fxLayoutAlign="center center">
+     <div class="skills__card"  *ngFor="let skill of skills" [@fadeIn]="isVisible" (click)="toggleFlip(skill)"  [@flipState]="skill.flip" fxLayoutAlign="center center">
         <div class="skills__card-side skills__card-side--front" [ngStyle.xl]="{'min-width': '35rem'}" [ngStyle.lg]="{'width': '25rem'}"
              [ngStyle.lt-lg]="{'width': '18rem'}"[ngStyle.lt-md]="{'width': '45rem'}" [ngStyle.lt-sm]="{'width': '25rem'}">
 
@@ -39,7 +39,8 @@
           </div>
         </div>
 
-        <div class="skills__card-side skills__card-side--back" >
+        <div class="skills__card-side skills__card-side--back" [ngStyle.xl]="{'min-width': '35rem'}" [ngStyle.lg]="{'width': '25rem'}" [ngStyle.lt-lg]="{'width': '18rem'}"[ngStyle.lt-md]="{'width':
+        '45rem'}" [ngStyle.lt-sm]="{'width': '25rem'}" >
           <div fxLayout.gt-xs="column" fxLayout.xs="column">
             <div fxLayoutAlign="center center">
               <h2 class="skills__card-projects">Projects</h2>
