@@ -19,15 +19,15 @@
                   <mat-icon>menu</mat-icon>
                 </button>
                 <div fxLayout="row" fxLayoutFill fxLayoutGap="20px" fxShow="false" fxShow.gt-sm>
-                    <div fxFlex='0' fxLayoutAlign="center">
+                    <div fxLayoutAlign="center">
                         <a routerLink="/home" routerLinkActive="is-activated">
                             <span mat-line>Home</span>
                         </a>
                     </div>
-                    <div fxFlex="0">
-                        <a>
-                            <span mat-line>Skills</span>
-                        </a>
+                    <div>
+                        <button (click)="scrollToElement(skills)">
+                            <span class="skills-title" mat-line>Skills</span>
+                        </button>
                     </div>
                 </div>
         </mat-toolbar>

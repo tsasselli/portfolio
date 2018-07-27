@@ -1,3 +1,43 @@
-<p>
-  contact-form works!
-</p>
+<!-- <form [formGroup]="contactForm">
+    <input fxFlexFill type="email" matInput formControlName="email" placeholder="Email:" required >
+    <input fxFlexFill type="email" matInput formControlName="email" placeholder="Email:" required >
+</form> -->
+<div fxLayout.gt-md="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
+   <div>
+    <mat-card class="contact__card">
+        <mat-card-title class="contact__card-title">Send Email</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="contactForm">
+                <div fxFlexLayout="row">
+                    <mat-form-field fxFlexFill [ngClass]="{'error': contactForm.controls['email'].errors && !contactForm.controls['email'].pristine}">
+                        <input type="email" matInput formControlName="email" placeholder="Email" required>
+                        <mat-error *ngIf="contactForm.controls['email'].errors && !contactForm.controls['email'].pristine">
+                            <div [hidden]="!contactForm.controls['email'].errors.required">Email is required.</div>
+                            <div [hidden]="!contactForm.controls['email'].errors.patternInvalid">Email is invalid.</div>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxFlexLayout="row">
+                    <mat-form-field fxFlexFill [ngClass]="{'error': contactForm.controls['name'].errors && !contactForm.controls['name'].pristine}" color="{{contactForm.controls['name'].errors && !contactForm.controls['name'].pristine ? 'warn' : 'primary'}}">
+                        <input type="text" matInput formControlName="name" placeholder="name" required>
+                        <div *ngIf="contactForm.controls['name'].errors && !contactForm.controls['name'].pristine" class="error-msg">
+                            <div [hidden]="!contactForm.controls['name'].errors.required">Name is required.</div>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div fxFlexLayout="row">
+                    <mat-form-field fxFlexFill [ngClass]="{'error': contactForm.controls['message'].errors && !contactForm.controls['message'].pristine}"
+                        color="{{contactForm.controls['message'].errors && !contactForm.controls['message'].pristine ? 'warn' : 'primary'}}">
+                        <textarea type="text" matInput matTextareaAutosize formControlName="message" placeholder="message" required> </textarea>
+                        <div *ngIf="contactForm.controls['message'].errors && !contactForm.controls['message'].pristine" class="error-msg">
+                            <div [hidden]="!contactForm.controls['message'].errors.required">message is required.</div>
+                        </div>
+                    </mat-form-field>
+                </div>
+            </form>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button class="btn" color="accent" [disabled]="!contactForm" (click)="onSubmit()">Send Email</button>
+        </mat-card-actions>
+    </mat-card>
+   </div>     

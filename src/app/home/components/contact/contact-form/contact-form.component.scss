@@ -1,0 +1,14 @@
+.warn {
+    color: red;
+}
+
+.mat-card {
+    background: rgba(#fff, .6);
+    width: 34rem;
+}
+
+.contact__card {
+    &-title {
+        font-size: 2rem;
+    }
+}

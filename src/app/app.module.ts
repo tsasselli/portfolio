@@ -19,7 +19,9 @@ import { ContactComponent } from './home/components/contact/contact/contact.comp
 import { AboutComponent } from './home/components/about/about/about.component';
 import { IntrestsComponent } from './home/components/about/intrests/intrests.component';
 import { AngularFireModule } from 'angularfire2';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './home/components/contact/contact-form/contact-form.component';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ContactFormComponent } from './home/components/contact/contact-form/con
     MaterialModule,
     LayoutModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [SkillService, ProjectService],
   bootstrap: [AppComponent]
