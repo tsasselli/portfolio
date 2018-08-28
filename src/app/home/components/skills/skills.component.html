@@ -12,12 +12,17 @@
   <!-- CARD SECTION -->
   <div class="skills__card-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center">
      <div class="skills__card"  *ngFor="let skill of skills" [@fadeIn]="isVisible" (click)="toggleFlip(skill)"  [@flipState]="skill.flip" fxLayoutAlign="center center">
-        <div class="skills__card-side skills__card-side--front" [ngStyle.xl]="{'min-width': '35rem'}" [ngStyle.lg]="{'width': '25rem'}"
-             [ngStyle.lt-lg]="{'width': '18rem'}"[ngStyle.lt-md]="{'width': '45rem'}" [ngStyle.lt-sm]="{'width': '25rem'}">
+        <!-- FRONT OF CARD -->
+<div class="skills__card-side skills__card-side--front" [ngStyle.xl]="{'min-width': '35rem'}" [ngStyle.lg]="{'width': '28rem'}"
+             [ngStyle.lt-lg]="{'width': '26rem'}"
+             [ngStyle.lt-md]="{'width': '44rem'}" [ngStyle.lt-sm]="{'width': '20rem'}">
+<div fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutAlign="center center">
 
-          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" >
-            <span class="skills__card-title" fxLayoutAlign="center" fxFlex="100%">{{skill.title}}</span>
-          </mat-card-title>
+                <mat-card-title>
+                  <span class="skills__card-title" fxLayoutAlign="center center" fxFlex="100%">{{skill.title}}</span>
+                </mat-card-title>
+             </div>
+    
          <div fxLayout.gt-xs="row"  fxLayoutAlign="center center">
           <img mat-card-image class="skills__card-image" [src]="skill.cardImage">
           </div>
